@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <nav id="navbar">
+        <header>Python Documentation</header>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#What_You_Should_Know">What You Should Know</a></li>
+        <li><a class="nav-link" href="#Python_and_Other_Languages">Python and Other Languages</a></li>
+        <li><a class="nav-link" href="#Hello,_World!">Hello, World!</a></li>
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
+        <li><a class="nav-link" href="#Declaring_Variables">Declaring Variables</a></li>
+        <li><a class="nav-link" href="#Variable_Scope">Variable Scope</a></li>
+        <li><a class="nav-link" href="#Block_Scope">Block Scope</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </nav>
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+                  <header>Introduction</header>
+          <article>
+            <p>
+              Python is a cross-platform, high-level interpreted programming language. It is known for its simplicity and readability, making it an ideal choice for both beginners and experienced developers. Python can be used in various environments, such as web development, data analysis, artificial intelligence, automation, and more.
+              </p>
+              <p>Python includes a standard library of objects, such as lists (list), dictionaries (dict), dates (datetime), and mathematical functions (math), as well as core language elements like operators, control structures, and statements. The core of Python can be extended for various purposes using additional modules and libraries. For example:
+                </p>
+                <ul>
+                  <li>
+                    Web Development: With frameworks like Django and Flask, Python enables the creation of powerful web applications and APIs.
+                    </li>
+                    <li>
+                      Scientific Computing: Libraries such as NumPy, SciPy, and Pandas provide tools for data manipulation and complex computations.
+                    </li>
+                    <li>
+                     Automation: Python can be used to write scripts that automate repetitive tasks. 
+                    </li>
+                  </ul>
+            </article>
+        </section>
+        <section class="main-section" id="What_You_Should_Know">
+                  <header>What You Should Know</header>
+          <article>
+            <p>
+                     This guide assumes you have the following basic background:
+                   </p>
+                   <ul>
+                     <li>
+                       A general understanding of programming fundamentals.
+                       </li>
+                       <li>
+                         Familiarity with basic concepts such as variables, loops, and functions.
+                       </li>
+                       <li>
+                         If you are new to programming, it is recommended to start with basic tutorials.
+                       </li>
+                     </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Python_and_Other_Languages">
+                  <header>Python and Other Languages</header>
+          <article>
+            <p>Python is often compared to languages like JavaScript and Java. While Python shares some syntactic similarities with these languages, it is fundamentally different in its approach. Python is dynamically typed, meaning you do not need to declare variable types explicitly. It also uses an object-oriented paradigm but is more flexible and less verbose compared to Java.
+              </p>
+              <p>Python’s design philosophy emphasizes code readability and simplicity, which is reflected in its use of indentation for block structuring instead of braces. This makes Python code more intuitive and easier to maintain.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Hello,_World!">
+                  <header>Hello, World!</header>
+          <article>
+             <p>To get started with Python, you can write your first "Hello, World!" program:
+              </p>
+              <code>
+def greet_me(your_name):
+    print(f"Hello, {your_name}!")
+
+greet_me("World")
+                </code>
+                <p>Simply run this code in a Python environment, and you’ll see the output in your console.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Variables">
+                  <header>Variables</header>
+          <article>
+            <p>Variables in Python are used as symbolic names for values in your program. Variable names, called identifiers, follow certain rules:\
+              </p>
+              <ul>
+                <li>
+                  A Python identifier must start with a letter (a-z, A-Z) or an underscore (_).
+                  </li>
+                   <li>
+                     Subsequent characters can be letters, digits (0-9), or underscores.
+                  </li>
+                   <li>
+                     Python is case-sensitive, so myVar and myvar are considered different variables.
+                  </li>
+                </ul>
+                <p>Examples of valid variable names include number_hits, temp99, and _name.
+                  </p>
+            </article>
+        </section>
+        <section class="main-section" id="Declaring_Variables">
+          <header>Declaring Variables</header>
+          <article>
+            <p>In Python, variables are created when you assign a value to them. Unlike JavaScript, Python does not require keywords like var, let, or const to declare variables. Instead, you simply assign a value to a variable name. For example:
+              </p>
+              <code>
+                x = 42
+                </code>
+                <p>This creates a variable x and assigns it the value 42. In Python, variables are always scoped to the block in which they are defined, such as a function, loop, or conditional statement.
+                  </p>
+            </article>
+             <section class="main-section" id="Variable_Scope">
+          <header>Variable Scope</header>
+          <article>
+            <p>In Python, the scope of a variable determines where it can be accessed:
+              <p>
+                <ul>
+                  <li>
+                    Global Variables: If a variable is declared outside of any function or block, it is considered a global variable. Global variables can be accessed from anywhere in the code, including inside functions.
+                    </li>
+                    <code>
+x = 42  # Global variable
+
+def my_function():
+    print(x)  # Accessing the global variable
+
+my_function()  # Output: 42
+                      </code>
+                      <li>
+                        Local Variables: If a variable is declared inside a function or block, it is considered a local variable. Local variables can only be accessed within the function or block where they are defined.
+                    </li>
+                    <code>
+ def my_function():
+    y = 13  # Local variable
+    print(y)
+
+my_function()  # Output: 13
+print(y)  # This will raise a NameError because y is not defined outside the function
+                      </code>
+                  </ul>
+            </article>
+             <section class="main-section" id="Block_Scope">
+          <header>Block Scope</header>
+          <article>
+            <p>Python does not have block-level scope like JavaScript. Variables declared inside a block (such as a loop or conditional statement) are accessible outside that block, as long as they are in the same function or global scope. For example:
+              </p>
+              <code>
+if True:
+    z = 10  # This variable is accessible outside the if block
+
+print(z)  # Output: 10
+                </code>
+                <p>However, if you declare a variable inside a function, it will not be accessible outside that function, regardless of whether it was declared in a block or not.
+                  </p>
+            </article>
+        </section>
+        <section class="main-section" id="Reference">
+          <header>Reference</header>
+          <article>
+            <ul>
+              <li>
+                All the documentation in this page is taken from <a href="https://docs.python.org/3/" terget="_blank">MDN</a>
+                </li>
+                </ul>
+            </article>
+          </section>
+        </main>
+      </body>
+  </html>
